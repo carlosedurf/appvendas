@@ -1,8 +1,8 @@
-The Original;78951;45.78;true;Cabernet Suvignon;true;B
-Coca Cola;95421;5.99;true;Coca-Cola;false;B
-Fifa 2023;1231;299.99;true;true;Xbox;J
-Fórmula 1;4561;399.99;false;true;Plastation;J
-Santa Alicia;132421;599;false;Pinot Noir;true;B
-Fanta Uva;21651;4.99;true;Coca-Cola;true;B
-Quebra Cabeça;1111;9.99;true;false;Física;J
-Baldur's Gate 3;2221;199.99;true;false;PC;J
+The Original;78951;45.78;true;Cabernet Suvignon;true;B;1
+Coca Cola;95421;5.99;true;Coca-Cola;false;B;1
+Fifa 2023;1231;299.99;true;true;Xbox;J;3
+Fórmula 1;4561;399.99;false;true;Plastation;J;4
+Santa Alicia;132421;599;false;Pinot Noir;true;B;2
+Fanta Uva;21651;4.99;true;Coca-Cola;true;B;1
+Quebra Cabeça;1111;9.99;true;false;Física;J;2
+Baldur's Gate 3;2221;199.99;true;false;PC;J;1

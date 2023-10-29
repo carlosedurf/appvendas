@@ -10,6 +10,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import br.edu.infnet.appvendas.model.domain.Bebida;
+import br.edu.infnet.appvendas.model.domain.Vendedor;
 import br.edu.infnet.appvendas.model.service.BebidaService;
 
 @Component
@@ -33,6 +34,8 @@ public class BebidaLoader implements ApplicationRunner {
 			bebida.setEstoque(Boolean.valueOf(campos[3]));
 			bebida.setMarca(campos[4]);
 			bebida.setAlcoolico(Boolean.valueOf(campos[5]));
+			Vendedor vendedor = new Vendedor();
+			vendedor.setId(Integer.valueOf(campos[6]));
 			bebidaService.incluir(bebida);
 			linha = leitura.readLine();
 		}

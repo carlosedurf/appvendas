@@ -24,4 +24,5 @@ git clone repo
 ```
 
 1. Vá em <strong>File</strong> -> <strong>Import</strong> -> <strong>Maven</strong>[Exising Maven Project] selecione o repositório
-2. Para buildar selecione em cima do projeto(AppVendas) vá na opção <strong>Run as</strong> Maven Build.
+2. Rode <strong>docker-compose up -d --build</strong> para gerar uma imagem de mysql, já está configurado na properties o usuário e senha inicializados na imagem.
+3. Para buildar selecione em cima do projeto(AppVendas) vá na opção <strong>Run as</strong> Maven Build.

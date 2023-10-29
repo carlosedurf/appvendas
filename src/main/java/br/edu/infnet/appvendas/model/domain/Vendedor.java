@@ -2,11 +2,31 @@ package br.edu.infnet.appvendas.model.domain;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TVendedor")
 public class Vendedor {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	private String nome;
 	private String cpf;
 	private String email;
+	@OneToMany
+	@JoinColumn(name = "idVendedor")
 	private List<Produto> produtos;
+	
+	@Override
+	public String toString() {
+		return String.format("#%d - %s - %s - %s - %d", nome, cpf, email, produtos.size());
+	}
 	
 	public List<Produto> getProdutos() {
 		return produtos;
@@ -15,12 +35,15 @@ public class Vendedor {
 	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
 	}
-
-	@Override
-	public String toString() {
-		return String.format("%s - %s - %s", nome, cpf, email);
-	}
 	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public String getNome() {
 		return nome;
 	}
