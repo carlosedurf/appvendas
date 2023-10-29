@@ -1,0 +1,4 @@
+Fifa 2023;123;299.99;true;true;Xbox
+Fórmula 1;456;399.99;false;true;Plastation
+Quebra Cabeça;111;9.99;true;false;Física
+Baldur's Gate 3;222;199.99;true;false;PC

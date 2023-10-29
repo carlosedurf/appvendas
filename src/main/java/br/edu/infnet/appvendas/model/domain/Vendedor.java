@@ -1,9 +1,25 @@
 package br.edu.infnet.appvendas.model.domain;
 
-public class Seguro {
+import java.util.List;
+
+public class Vendedor {
 	private String nome;
 	private String cpf;
 	private String email;
+	private List<Produto> produtos;
+	
+	public List<Produto> getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("%s - %s - %s", nome, cpf, email);
+	}
 	
 	public String getNome() {
 		return nome;

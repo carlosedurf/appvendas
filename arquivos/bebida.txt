@@ -1,0 +1,4 @@
+The Original;7895;45.78;true;Cabernet Suvignon;true
+Coca Cola;9542;5.99;true;Coca-Cola;false
+Santa Alicia;13242;599;false;Pinot Noir;true
+Fanta Uva;2165;4.99;true;Coca-Cola;true

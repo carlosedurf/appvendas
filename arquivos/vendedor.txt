@@ -1,0 +1,4 @@
+Fulano da Silva;12312312345;fulano@mail.com
+Cicrano;45621345678;cicrano@mail.com
+Beltrano Peixoto;78945612365;beltano@mail.com
+João de Freitas;96385274191;joao@mail.com
