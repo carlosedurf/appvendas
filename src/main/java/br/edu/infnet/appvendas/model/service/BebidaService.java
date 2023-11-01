@@ -10,6 +10,7 @@ import br.edu.infnet.appvendas.model.repository.BebidaRepository;
 
 @Service
 public class BebidaService {
+	
 	@Autowired
 	private BebidaRepository bebidaRepository;
 	
@@ -19,5 +20,9 @@ public class BebidaService {
 	
 	public Collection<Bebida> obterLista() {
 		return (Collection<Bebida>) bebidaRepository.findAll();
+	}
+	
+	public long obterQuantidade() {
+		return bebidaRepository.count();
 	}
 }

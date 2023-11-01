@@ -3,10 +3,16 @@ package br.edu.infnet.appvendas.model.domain;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 @Entity
 @Table(name = "TJogo")
 public class Jogo extends Produto {
+	@NotNull
 	private boolean eletronico;
+	
+	@Size(min = 2, max = 20, message = "a plataforma precisa ter no minimo {min} e maximo {max} caracteres")
 	private String plataforma;
 	
 	@Override

@@ -13,9 +13,10 @@ import br.edu.infnet.appvendas.model.domain.Bebida;
 import br.edu.infnet.appvendas.model.domain.Vendedor;
 import br.edu.infnet.appvendas.model.service.BebidaService;
 
-@Component
 @Order(4)
+@Component
 public class BebidaLoader implements ApplicationRunner {
+	
 	@Autowired
 	private BebidaService bebidaService;
 

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import br.edu.infnet.appvendas.model.domain.Vendedor;
 
 @Repository
-public interface VendedorRepository extends CrudRepository<Vendedor, Integer> {
+public interface VendedorRepository extends CrudRepository<Vendedor,Integer> {
 	
 }

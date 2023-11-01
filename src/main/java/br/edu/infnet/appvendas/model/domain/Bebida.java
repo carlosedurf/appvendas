@@ -3,10 +3,14 @@ package br.edu.infnet.appvendas.model.domain;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import jakarta.validation.constraints.NotNull;
+
 @Entity
 @Table(name = "TBebida")
 public class Bebida extends Produto {
 	private String marca;
+	
+	@NotNull
 	private boolean alcoolico;
 	
 	@Override

@@ -10,6 +10,7 @@ import br.edu.infnet.appvendas.model.repository.JogoRepository;
 
 @Service
 public class JogoService {
+	
 	@Autowired
 	private JogoRepository jogoRepository;
 	
@@ -19,5 +20,9 @@ public class JogoService {
 	
 	public Collection<Jogo> obterLista() {
 		return (Collection<Jogo>) jogoRepository.findAll();
+	}
+	
+	public long obterQuantidade() {
+		return jogoRepository.count();
 	}
 }

@@ -10,6 +10,7 @@ import br.edu.infnet.appvendas.model.repository.VendedorRepository;
 
 @Service
 public class VendedorService {
+	
 	@Autowired
 	private VendedorRepository vendedorRepository;
 	
@@ -19,5 +20,9 @@ public class VendedorService {
 	
 	public Collection<Vendedor> obterLista() {
 		return (Collection<Vendedor>) vendedorRepository.findAll();
+	}
+	
+	public long obterQuantidade() {
+		return vendedorRepository.count();
 	}
 }

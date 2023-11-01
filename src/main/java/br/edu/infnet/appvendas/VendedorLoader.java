@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 import br.edu.infnet.appvendas.model.domain.Vendedor;
 import br.edu.infnet.appvendas.model.service.VendedorService;
 
-@Component
 @Order(1)
+@Component
 public class VendedorLoader implements ApplicationRunner {	
 	@Autowired
 	private VendedorService vendedorService;

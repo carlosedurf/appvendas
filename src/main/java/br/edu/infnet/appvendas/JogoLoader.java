@@ -13,8 +13,8 @@ import br.edu.infnet.appvendas.model.domain.Jogo;
 import br.edu.infnet.appvendas.model.domain.Vendedor;
 import br.edu.infnet.appvendas.model.service.JogoService;
 
-@Component
 @Order(3)
+@Component
 public class JogoLoader implements ApplicationRunner {
 	@Autowired
 	private JogoService jogoService;

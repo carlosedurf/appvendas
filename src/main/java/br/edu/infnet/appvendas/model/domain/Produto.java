@@ -10,6 +10,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.PositiveOrZero;
+
 @Entity
 @Table(name = "TProduto")
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -17,10 +20,17 @@ public class Produto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	private String descricao;
+	
+	@PositiveOrZero
 	private int codigo;
+	
+	@Positive
 	private float preco;
+	
 	private boolean estoque;
+	
 	@ManyToOne
 	@JoinColumn(name = "idVendedor")
 	private Vendedor vendedor;

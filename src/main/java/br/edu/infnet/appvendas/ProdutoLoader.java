@@ -16,8 +16,8 @@ import br.edu.infnet.appvendas.model.domain.Vendedor;
 import br.edu.infnet.appvendas.model.service.ProdutoService;
 import br.edu.infnet.appvendas.model.service.VendedorService;
 
-@Component
 @Order(2)
+@Component
 public class ProdutoLoader implements ApplicationRunner {
 	@Autowired
 	private ProdutoService produtoService;

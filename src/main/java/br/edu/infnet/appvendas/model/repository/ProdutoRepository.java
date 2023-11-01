@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import br.edu.infnet.appvendas.model.domain.Produto;
 
 @Repository
-public interface ProdutoRepository extends CrudRepository<Produto, Integer> {
+public interface ProdutoRepository extends CrudRepository<Produto,Integer> {
 	@Query("from Produto p where p.vendedor.id = :vendedorId")
 	Collection<Produto> obterLista(Integer vendedorId);
 }

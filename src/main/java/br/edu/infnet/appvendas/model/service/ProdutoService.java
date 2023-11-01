@@ -11,6 +11,7 @@ import br.edu.infnet.appvendas.model.repository.ProdutoRepository;
 
 @Service
 public class ProdutoService {
+	
 	@Autowired
 	private ProdutoRepository produtoRepository;
 	
@@ -28,5 +29,9 @@ public class ProdutoService {
 	
 	public Collection<Produto> obterLista(Integer id) {
 		return (Collection<Produto>) produtoRepository.obterLista(id);
+	}
+	
+	public long obterQuantidade() {
+		return produtoRepository.count();
 	}
 }
