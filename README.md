@@ -13,8 +13,8 @@ Projeto com objetivo de demonstrar a parte de estrutura/arquitetura na parte jav
 
 ##### Configurações:
 - Project: Maven
-- Language: Java (Jdk 17)
-- Spring Boot: 3.1.5
+- Language: Java (Jdk 11)
+- Spring Boot: 2.7.17
 - Packaging: Jar
 
 

@@ -11,9 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(
@@ -35,15 +34,16 @@ public class Vendedor {
 	private String cpf;
 	
 	@Size(min = 2, max = 50)
-//	@Column(unique = true)
+	@Column(unique = true)
 	private String email;
+	
 	@OneToMany
 	@JoinColumn(name = "idVendedor")
 	private List<Produto> produtos;
 	
 	@Override
 	public String toString() {
-		return String.format("#%d - %s - %s - %s", nome, cpf, email);
+		return String.format("#%d - %s - %s - %s", id, nome, cpf, email);
 	}
 	
 	public List<Produto> getProdutos() {

@@ -42,7 +42,7 @@ public class BebidaLoader implements ApplicationRunner {
 		}
 		System.out.println("Processamento finalizado com sucesso!");
 		for (Bebida bebida : bebidaService.obterLista()) {
-			System.out.println("[Bebida] " + bebida);
+			System.out.println("[Bebida] " + bebida.toString());
 		}
 		leitura.close();
 	}

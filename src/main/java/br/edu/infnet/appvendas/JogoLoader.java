@@ -41,7 +41,7 @@ public class JogoLoader implements ApplicationRunner {
 		}
 		System.out.println("Processamento finalizado com sucesso!");
 		for (Jogo jogo : jogoService.obterLista()) {
-			System.out.println("[Jogo] " + jogo);
+			System.out.println("[Jogo] " + jogo.toString());
 		}
 		leitura.close();
 	}

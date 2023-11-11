@@ -66,7 +66,7 @@ public class ProdutoLoader implements ApplicationRunner {
 		for (Vendedor v: vendedorService.obterLista()) {
 			System.out.println("[VENDEDOR] " + v.getId());
 			for(Produto produto: produtoService.obterLista(v)) {
-				System.out.println("[Produto] " + produto);
+				System.out.println("[Produto] " + produto.toString());
 			}
 		}
 		leitura.close();
