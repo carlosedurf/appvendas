@@ -35,7 +35,7 @@
 		<span class="badge rounded-pill bg-primary">Vendedor: ${qtdeVendedor}</span>
 	  	<span class="badge rounded-pill bg-secondary">Produto: ${qtdeProduto}</span>
 	  	<span class="badge rounded-pill bg-success">Bebidas: ${qtdeBebida}</span>
-	  	<span class="badge rounded-pill bg-danger">Jogos; ${qtdeJogo}</span>
+	  	<span class="badge rounded-pill bg-danger">Jogos: ${qtdeJogo}</span>
   	
   		<c:if test="${not empty listagem}">
 			<h2>AppVenda</h2>

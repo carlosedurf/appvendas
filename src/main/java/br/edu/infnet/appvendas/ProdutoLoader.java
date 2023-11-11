@@ -3,6 +3,8 @@ package br.edu.infnet.appvendas;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+import javax.validation.ConstraintViolationException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -43,7 +45,12 @@ public class ProdutoLoader implements ApplicationRunner {
 					jogo.setEletronico(Boolean.valueOf(campos[4]));
 					jogo.setPlataforma(campos[5]);
 					vendedor.setId(Integer.valueOf(campos[7]));
-					produtoService.incluir(jogo);
+					try {
+						produtoService.incluir(jogo);
+					} catch (ConstraintViolationException e) {
+						System.out.println("[ PRODUTO_JOGO_ERROR ]" + jogo.toString());
+						FileLogger.logException("[ PRODUTO_JOGO_ERROR ]" + jogo.toString() + " - " + e.getMessage());
+					}
 					break;
 				case "B":
 					Bebida bebida = new Bebida();
@@ -54,7 +61,12 @@ public class ProdutoLoader implements ApplicationRunner {
 					bebida.setMarca(campos[4]);
 					bebida.setAlcoolico(Boolean.valueOf(campos[5]));
 					vendedor.setId(Integer.valueOf(campos[7]));
-					produtoService.incluir(bebida);
+					try {
+						produtoService.incluir(bebida);
+					} catch (ConstraintViolationException e) {
+						System.out.println("[ PRODUTO_BEBIDA_ERROR ]" + bebida.toString());
+						FileLogger.logException("[ PRODUTO_BEBIDA_ERROR ]" + bebida.toString() + " - " + e.getMessage());
+					}
 					break;
 				default:
 					break;

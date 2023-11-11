@@ -3,6 +3,8 @@ package br.edu.infnet.appvendas;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+import javax.validation.ConstraintViolationException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -37,7 +39,12 @@ public class JogoLoader implements ApplicationRunner {
 			Vendedor vendedor = new Vendedor();
 			vendedor.setId(Integer.valueOf(campos[6]));
 			jogo.setVendedor(vendedor);
-			jogoService.incluir(jogo);
+			try {
+				jogoService.incluir(jogo);
+			} catch (ConstraintViolationException e) {
+				System.out.println("[ JOGO_ERROR ]" + jogo.toString());
+				FileLogger.logException("[ JOGO_ERROR ]" + jogo.toString() + " - " + e.getMessage());
+			}
 			linha = leitura.readLine();
 		}
 		System.out.println("Processamento finalizado com sucesso!");

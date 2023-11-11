@@ -1,5 +1,5 @@
-nov. 11, 2023 1:21:56 PM br.edu.infnet.appvendas.FileLogger logException
-SEVERE: [ VENDEDOR_ERROR ]ID (null) - Nome (C) - CPF (456.213.456-78) - E-mail (cicrano@mail.com) - Endereço (CEP (20010-020) - Bairro (Centro) - UF (RJ)) - Produtos (0) - Validation failed for classes [br.edu.infnet.appvendas.model.domain.Vendedor] during persist time for groups [javax.validation.groups.Default, ]
+nov. 11, 2023 1:27:20 PM br.edu.infnet.appvendas.FileLogger logException
+SEVERE: [ VENDEDOR_ERROR ]ID (null) - Nome (C) - CPF (456.213.456-78) - E-mail (cicrano@mail.com) - EndereÃ§o (CEP (20010-020) - Bairro (Centro) - UF (RJ)) - Produtos (0) - Validation failed for classes [br.edu.infnet.appvendas.model.domain.Vendedor] during persist time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='tamanho deve ser entre 2 e 50', propertyPath=nome, rootBeanClass=class br.edu.infnet.appvendas.model.domain.Vendedor, messageTemplate='{javax.validation.constraints.Size.message}'}
 ]
