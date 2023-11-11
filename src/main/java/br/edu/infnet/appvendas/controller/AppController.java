@@ -20,7 +20,7 @@ public class AppController {
 	private BebidaService bebidaService;
 	@Autowired
 	private JogoService jogoService;
-	
+
 	@GetMapping(value = "/")
 	public String showHome(Model model) {
 		model.addAttribute("qtdeVendedor", vendedorService.obterQuantidade());
@@ -29,32 +29,8 @@ public class AppController {
 		model.addAttribute("qtdeJogo", jogoService.obterQuantidade());
 		return "home";
 	}
+
 	
-	@GetMapping(value = "/vendedor/lista")
-	public String obterListaVendedor(Model model) {
-		model.addAttribute("titulo", "Vendedores:");
-		model.addAttribute("listagem", vendedorService.obterLista());
-		return showHome(model);
-	}
+
 	
-	@GetMapping(value = "/produto/lista")
-	public String obterListaProduto(Model model) {
-		model.addAttribute("titulo", "Produtos:");
-		model.addAttribute("listagem", produtoService.obterLista());
-		return showHome(model);
-	}
-	
-	@GetMapping(value = "/bebida/lista")
-	public String obterListaBebida(Model model) {
-		model.addAttribute("titulo", "Bebidas:");
-		model.addAttribute("listagem", bebidaService.obterLista());
-		return showHome(model);
-	}
-	
-	@GetMapping(value = "/jogo/lista")
-	public String obterListaJogo(Model model) {
-		model.addAttribute("titulo", "Jogos:");
-		model.addAttribute("listagem", jogoService.obterLista());
-		return showHome(model);
-	}
 }

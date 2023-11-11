@@ -23,6 +23,10 @@ public class ProdutoService {
 		return (Collection<Produto>) produtoRepository.findAll();
 	}
 	
+	public void excluir(Integer id) {
+		produtoRepository.deleteById(id);
+	}
+	
 	public Collection<Produto> obterLista(Vendedor vendedor) {
 		return (Collection<Produto>) produtoRepository.obterLista(vendedor.getId());
 	}

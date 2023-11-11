@@ -36,6 +36,7 @@ public class JogoLoader implements ApplicationRunner {
 			jogo.setPlataforma(campos[5]);
 			Vendedor vendedor = new Vendedor();
 			vendedor.setId(Integer.valueOf(campos[6]));
+			jogo.setVendedor(vendedor);
 			jogoService.incluir(jogo);
 			linha = leitura.readLine();
 		}

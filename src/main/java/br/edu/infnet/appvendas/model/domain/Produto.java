@@ -36,7 +36,15 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return String.format("#%d Descrição: %s\nCódigo: %d\nPreço: R$ %.2f\nTem Estoque: %s\n", id, descricao, codigo, preco, estoque);
+		return String.format(
+			"#%d - Descrição: %s - Código: %d - Preço: R$ %.2f - Tem Estoque: %s - Vendedor (%s)", 
+			id, 
+			descricao, 
+			codigo, 
+			preco, 
+			estoque,
+			vendedor != null ? vendedor.toString() : "N/E" 
+		);
 	}
 
 	public Integer getId() {

@@ -37,6 +37,7 @@ public class BebidaLoader implements ApplicationRunner {
 			bebida.setAlcoolico(Boolean.valueOf(campos[5]));
 			Vendedor vendedor = new Vendedor();
 			vendedor.setId(Integer.valueOf(campos[6]));
+			bebida.setVendedor(vendedor);
 			bebidaService.incluir(bebida);
 			linha = leitura.readLine();
 		}

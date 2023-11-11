@@ -18,6 +18,10 @@ public class JogoService {
 		jogoRepository.save(jogo);
 	}
 	
+	public void excluir(Integer id) {
+		jogoRepository.deleteById(id);
+	}
+	
 	public Collection<Jogo> obterLista() {
 		return (Collection<Jogo>) jogoRepository.findAll();
 	}
