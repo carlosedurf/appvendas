@@ -29,4 +29,8 @@ public class BebidaService {
 	public long obterQuantidade() {
 		return bebidaRepository.count();
 	}
+
+	public Bebida pesquisar(Integer codigo) {
+		return (Bebida) bebidaRepository.findByCodigo(codigo);
+	}
 }

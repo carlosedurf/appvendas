@@ -1,4 +1,4 @@
-nov. 18, 2023 11:37:25 AM br.edu.infnet.appvendas.FileLogger logException
+nov. 18, 2023 12:27:36 PM br.edu.infnet.appvendas.FileLogger logException
 SEVERE: [ VENDEDOR_ERROR ]Validation failed for classes [br.edu.infnet.appvendas.model.domain.Vendedor] during persist time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='tamanho deve ser entre 2 e 50', propertyPath=nome, rootBeanClass=class br.edu.infnet.appvendas.model.domain.Vendedor, messageTemplate='{javax.validation.constraints.Size.message}'}

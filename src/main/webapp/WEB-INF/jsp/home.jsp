@@ -86,12 +86,14 @@
 					<thead class="table-dark">
 						<tr>
 							<th>Informações:</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
 						<c:forEach var="item" items="${informacoes}">
 							<tr>
 								<td>${item}</td>
+								<td><a href="/informacao/${item.id}/excluir">excluir</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

@@ -29,4 +29,8 @@ public class JogoService {
 	public long obterQuantidade() {
 		return jogoRepository.count();
 	}
+
+	public Jogo pesquisar(Integer codigo) {
+		return (Jogo) jogoRepository.findByCodigo(codigo);
+	}
 }

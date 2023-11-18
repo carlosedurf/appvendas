@@ -7,5 +7,5 @@ import br.edu.infnet.appvendas.model.domain.Bebida;
 
 @Repository
 public interface BebidaRepository extends CrudRepository<Bebida,Integer> {
-
+	Bebida findByCodigo(Integer codigo);
 }

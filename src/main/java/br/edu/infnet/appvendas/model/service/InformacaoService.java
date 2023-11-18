@@ -20,4 +20,8 @@ public class InformacaoService {
 	public Informacao incluir(Informacao informacao) {
 		return informacaoClient.incluir(informacao);
 	}
+	
+	public Informacao excluir(Integer id) {
+		return informacaoClient.excluir(id);
+	}
 }

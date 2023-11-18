@@ -38,4 +38,8 @@ public class ProdutoService {
 	public long obterQuantidade() {
 		return produtoRepository.count();
 	}
+
+	public Produto pesquisar(Integer codigo) {
+		return produtoRepository.findByCodigo(codigo);
+	}
 }
