@@ -17,7 +17,7 @@ public class Bebida extends Produto {
 	
 	@Override
 	public String toString() {
-		return String.format("%s \nMarca: %s\nÉ Alcoólico: %s\n", super.toString(), marca, alcoolico);
+		return String.format("%s - (%s) - (%s)", super.toString(), marca, alcoolico);
 	}
 	
 	public String getMarca() {

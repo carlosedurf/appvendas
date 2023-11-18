@@ -16,7 +16,7 @@ public class Jogo extends Produto {
 
 	@Override
 	public String toString() {
-		return String.format("%s \nÉ Eletrônico: %s\nPlataforma: %s\n", super.toString(), eletronico, plataforma);
+		return String.format("%s - %s - %s", super.toString(), eletronico, plataforma);
 	}
 
 	public boolean isEletronico() {

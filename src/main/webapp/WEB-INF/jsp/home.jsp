@@ -14,7 +14,7 @@
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 		<div class="container-fluid">
 			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link active" href="#">AppVenda</a>
+				<li class="nav-item"><a class="nav-link active" href="/">AppVenda</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="/vendedor/lista">Vendedores</a>
 				</li>
@@ -62,6 +62,41 @@
 					</c:forEach>
 				</tbody>
 			</table>
+		</c:if>
+
+		<c:if test="${empty listagem}">
+			<form action="/informacao/incluir" method="post" class="mt-2 mb-2">
+				<div class="row">
+					<div class="col">
+						<input type="text" class="form-control"
+							placeholder="Entre com o campo" name="campo" />
+					</div>
+					<div class="col">
+						<input type="text" class="form-control"
+							placeholder="Entre com a descrição" name="descricao" />
+					</div>
+					<div class="col">
+						<button class="btn btn-primary" type="submit">Cadastrar</button>
+					</div>
+				</div>
+			</form>
+
+			<c:if test="${not empty informacoes}">
+				<table class="table">
+					<thead class="table-dark">
+						<tr>
+							<th>Informações:</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach var="item" items="${informacoes}">
+							<tr>
+								<td>${item}</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</c:if>
 		</c:if>
 
 

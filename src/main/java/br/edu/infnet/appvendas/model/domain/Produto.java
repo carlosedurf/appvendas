@@ -37,7 +37,7 @@ public class Produto {
 	@Override
 	public String toString() {
 		return String.format(
-			"#%d - Descrição: %s - Código: %d - Preço: R$ %.2f - Tem Estoque: %s - Vendedor (%s)", 
+			"#%d - Descrição (%s) - Código (%d) - Preço (R$ %.2f) - Tem Estoque (%s) - Vendedor (%s)", 
 			id, 
 			descricao, 
 			codigo, 
