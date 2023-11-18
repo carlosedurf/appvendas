@@ -28,17 +28,16 @@ public class VendedorLoader implements ApplicationRunner {
 		String linha = leitura.readLine();
 		String[] campos = null;
 		while(linha != null) {
-			campos = linha.split(";");
-			Vendedor vendedor = new Vendedor();
-			vendedor.setNome(campos[0]);
-			vendedor.setCpf(campos[1]);
-			vendedor.setEmail(campos[2]);
-			vendedor.setEndereco(new Endereco(campos[3]));
 			try {
+				campos = linha.split(";");
+				Vendedor vendedor = new Vendedor();
+				vendedor.setNome(campos[0]);
+				vendedor.setCpf(campos[1]);
+				vendedor.setEmail(campos[2]);
+				vendedor.setEndereco(new Endereco(campos[3]));
 				vendedorService.incluir(vendedor);
 			} catch (ConstraintViolationException e) {
-				System.out.println("[ VENDEDOR_ERROR ]" + vendedor.toString());
-				FileLogger.logException("[ VENDEDOR_ERROR ]" + vendedor.toString() + " - " + e.getMessage());
+				FileLogger.logException("[ VENDEDOR_ERROR ]" + e.getMessage());
 			}
 			linha = leitura.readLine();
 		}

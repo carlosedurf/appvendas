@@ -1,5 +1,6 @@
 Fulano da Silva;123.123.123-45;fulano@mail.com;20010020
 Cicrano;456.213.456-78;cicrano@mail.com;20010020
-C;456.213.456-78;cicrano@mail.com;20010020
 Beltrano Peixoto;789.456.123-65;beltano@mail.com;25555681
 João de Freitas;963.852.741-91;joao@mail.com;25555681
+C;456.213.456-78;cicrano@mail.com;20010020
+José da Silva;123.546.579-01;jose@mail.com;20010020

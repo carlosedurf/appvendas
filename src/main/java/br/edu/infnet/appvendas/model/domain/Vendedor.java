@@ -36,7 +36,7 @@ public class Vendedor {
 	@Column(unique = true)
 	private String email;
 
-	@OneToMany(fetch = FetchType.EAGER)
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
 	@JoinColumn(name = "idVendedor")
 	private List<Produto> produtos;
 
@@ -47,7 +47,7 @@ public class Vendedor {
 	@Override
 	public String toString() {
 		return String.format(
-			"ID (%d) - Nome (%s) - CPF (%s) - E-mail (%s) - Endereço (%s) - Produtos (%d)", 
+			"(%d) - (%s) - (%s) - (%s) - (%s) - (%d)", 
 			id, 
 			nome,
 			cpf, 

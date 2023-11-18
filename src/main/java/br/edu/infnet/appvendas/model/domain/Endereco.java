@@ -29,7 +29,7 @@ public class Endereco {
 	
 	@Override
 	public String toString() {
-		return String.format("CEP (%s) - Bairro (%s) - UF (%s)", cep, bairro, uf);
+		return String.format("(%s) - (%s) - (%s)", cep, bairro, uf);
 	}
 
 	public Integer getId() {
